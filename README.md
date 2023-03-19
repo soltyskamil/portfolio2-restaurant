@@ -1,4 +1,5 @@
 # portfolio2-restaurant
+A website for an restaurant.
 ![home](https://user-images.githubusercontent.com/127696250/226200824-44801441-384f-4617-bcee-26f8240aee0b.png)
 ![homemb1](https://user-images.githubusercontent.com/127696250/226200837-25f22f13-ef2c-406e-ac87-32d8fed0b051.png)
 ![homemb](https://user-images.githubusercontent.com/127696250/226200839-01463703-f1ff-4cdc-bb06-3bd217e5d80f.png)
