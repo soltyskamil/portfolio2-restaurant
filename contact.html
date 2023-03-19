@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="navsctn">
+    <div class="container">
+        <div class="logonav">
+            <a href="index1.html"><i class="fa-solid fa-utensils"><span class="forkspan">Benihana</span></a></i>
+        </div>
+        <nav class="navbar">
+            <div class="hamburger-menu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">MENU</a>
+                </li>
+                <li class="nav-item">
+                    <a href="localizations.html" class="nav-link">OUR LOCALIZATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="book.html" class="nav-link">BOOK ONLINE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">CONTACT US</a>
+                </li>
+            </ul>
+        </nav>
+    <div class="contactform">
+        <form onsubmit="sendEmail(); reset(); return false; " >
+            <h1>MESSEGE US</h1>
+            <input type="YOUR NAME" id="name" placeholder="YOUR NAME">
+            <input type="YOUR PHONE" id="phone" placeholder="YOUR PHONE">
+            <input type="YOUR EMAIL ADRESS" id="email" placeholder="EMAIL ADRESS">
+            <textarea style="resize: none" name="" id="message" rows="3" placeholder="MESSAGE"></textarea>
+            <button type="submit">SEND</button>
+        </form>
+    </div>
+        <script src="app.js"></script>
+</body>
+</html>

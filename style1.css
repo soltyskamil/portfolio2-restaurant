@@ -1,0 +1,480 @@
+body{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+#navsctn{
+    background-image: url('images/background.jpg');
+    width: 100%;
+    height: 753px;
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.closeMenu{
+    visibility: hidden;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    opacity: 0.8;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+}
+.hamburger-menu{
+    width: 35px;
+    height: 30px;
+
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.8s;
+}
+.change .line-1{
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+.change .line-2{
+    opacity: 0;
+}
+.change .line-3{
+    transform: rotateZ(405deg) translate(-8px, -6px);;
+}
+.navbar{
+    width: 300px;
+    height: 100%;
+    background-color: #262626;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    border-radius: 20% 0 0 60%;
+    transition: right .8s cubic-bezier(1,0,0,1);
+}
+.change{
+    right: 0;
+}
+.nav-list{
+    text-align: right;
+}
+.nav-item{
+    list-style: none;
+    margin: 25px;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: 23px;
+    color: #eee;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+}
+.nav-link::before,
+.nav-link::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.nav-link::after{
+    bottom: 0;
+    transform-origin: right;
+}
+.nav-link::before{
+    top: 0;
+    transform-origin: left;
+}
+.nav-link:hover::before,
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+.logonav i{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 37px;
+}
+.logonav{
+    width: 55px;
+    height: 55px;
+    position: relative;
+    left: 5%;
+    top: 7%;
+    transition: 0.5s;
+}
+.forkspan{
+    font-size: 37px;
+    position: relative;
+    bottom: 15%;
+    left: 15%;
+    font-family: "Brush Script MT";
+}
+.presentation{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+}
+.presentation h2{
+    position: absolute;
+    color: white;
+    font-size: 225px;
+    left: 12%;
+    top: 23%;
+    font-family: "Freestyle Script";
+}
+.presentation p{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    top: 63%;
+    left: 11%;
+    width: 800px;
+    text-align: left;
+    font-family: Rubik;
+}
+.presentation span{
+    font-weight: bold;
+}
+.presentation button{
+    position: absolute;
+    font-size: 28px;
+    top: 73%;
+    left: 11%;
+    width: 220px;
+    height: 45px;
+    border-radius: 12px;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition:all 0.5s;
+    font-family: Rubik;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.presentation button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+    border-color: black;
+    border: 2px solid white;
+    font-family: Rubik;
+    font-size: 33px;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
+.presentation button:after{
+    transition: 0.5s;
+    color: black;
+}
+li button{
+    font-size: 25px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition:all 0.6s;
+    font-family: Rubik;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+li button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.6s;
+    border-color: black;
+    border: 2px solid white;
+    font-family: Rubik;
+    font-size: 25px;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
+li button:after{
+    transition: 0.6s;
+    color: black;
+}
+li a{
+    color: white;
+}
+li a:hover{
+    color: white;
+}
+li a:after{
+    transition: 0.6s;
+    color: white;
+}
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    width: 90%;
+   z-index:2;
+}
+form h1{
+    font-size: 45px;
+
+}
+form input, form textarea{
+    border: 0;
+    margin: 5px 0;
+    padding: 10px;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-left: 15px;
+    color: white;
+}
+#date input{
+
+}
+.contactform{
+    left: 10%;
+    top: 18%;
+    position: relative;
+    width: 80%;
+    height: 70%;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    display: grid;
+    background: transparent;
+}
+.contactform::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(5px);
+    border-radius: 15px;
+    background: inherit;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+::-webkit-calendar-picker-indicator:hover{
+    background-color: grey;
+
+}
+.contactform h1{
+    font-family: Rubik;
+    color: white;
+}
+form button{
+    font-size: 25px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    color: white;
+    margin-left: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    transition:all 0.6s;
+    font-family: Rubik;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+form button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.6s;
+    border-color: black;
+    border: 2px solid white;
+    font-family: Rubik;
+    font-size: 25px;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
+form button:after{
+    transition: 0.6s;
+    color: black;
+}
+iframe{
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    height: 80%;
+    border-radius: 12px;
+}
+.menudishes{
+    left: 30%;
+    top: 25%;
+    position: relative;
+    width: 550px;
+    height: 800px;
+    background-color: transparent;
+    border-radius: 25px;
+    border: 2px solid white;
+    display: grid;
+}
+.menudishes h2{
+    font-family: "Freestyle Script";
+    font-size: 65px;
+    text-align: center;
+    color: white;
+}
+.dish1{
+    width: 550px;
+    height: 350px;
+    border: 2px solid white;
+    position: absolute;
+    border-radius: 25px 0px 0px 25px;
+    top: 25%;
+    right: 70%;
+    display: grid;
+    background-color: white;
+}
+.dscfordish1{
+    width: 370px;
+    height: 350px;
+    position: absolute;
+    left: 100%;
+    top: -0.5%;
+    border: 2px solid white;
+    word-wrap: break-word;
+    background-color: white;
+    border-radius: 0px 25px 25px 0;
+}
+.dscfordish1 p{
+    font-size: 20px;
+    margin: 5px;
+    color: black;
+}
+.dscfordish1 h3{
+    color: black;
+    font-size: 27px;
+    margin-left: 2px;
+
+    position: relative;
+    text-align: center;
+    font-family: Rubik;
+}
+.dish1 img{
+    position: relative;
+    width: 450px;
+    height: 320px;
+    top: 5%;
+    left: 5%;
+    border-radius: 12px;
+    text-align: center;
+}
+@media screen and (max-width: 420px) {
+    .presentation h2{
+        font-size: 125px;
+        position: absolute;
+        left: 25%;
+        top: -10%;
+    }
+    iframe{
+        height: 450px;
+        top: 22%;
+    }
+    nav .mainMenu{
+        height: 100vh;
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu{
+        display: block;
+    }
+    .openMenu{
+        width: 15px;
+        height: 17px;
+    }
+    .presentation p{
+        font-size: 17px;
+        position: absolute;
+        width: 350px;
+        top: 30%;
+        text-align: center;
+    }
+    .presentation{
+        position: fixed;
+        height: 350px;
+        top: 45%;
+       transform: translate(-2%, -25%);
+
+    }
+
+    .presentation button{
+        position: absolute;
+        font-size: 28px;
+        top: 70%;
+        width: 350px;
+        height: 70px;
+        border-radius: 12px;
+        border: 2px solid white;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        transition:all 0.5s;
+        font-family: Rubik;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    .contactform h1{
+        font-family: Rubik;
+        color: white;
+        font-size: 35px;
+        margin-bottom: 25%;
+        margin-top: 5%;
+        transform: translateX(5%);
+    }
+    body{
+        overflow: hidden;
+    }
+}
